@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower|Press+Start+2P|Turret+Road&display=swap');
+/* * {
+    border: 1px saddlebrown solid;
+} */
+html {
+    background-image: url("images/ooo_map2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    /* overflow: scroll; */
+}
+h1 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.5em;
+    text-align: right;
+}
+.place img {
+    height: 100px;
+    width: 100px;
+    background-attachment: fixed;
+    display: inline-block;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 85%;
+    margin: auto;
+    /* border: 1.5px saddlebrown solid; */
+}
+.directions {
+    background-color: ivory;
+    font-family: 'Turret Road', cursive;
+    padding: 10px;
+    font-size: .75em;
+    border-radius: 8px;
+}
+
+.magic {
+    display: flex;
+    background-image: url("images/magic-man-house.jpg");
+    background-repeat: no-repeat;
+    height: 500px;
+    margin-top: 10px;
+}
+.magic img {
+    display: block;
+    margin: auto;
+    border: 2px solid saddlebrown;
+}
+.popup-magic {
+    visibility: visible;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.popup-content {
+    visibility: visible;
+    width: 400px;
+    height: 200px;
+}
+.popup-magic.active {
+    visibility: visible;
+}
+.popup-content.active {
+    visibility: visible;
+}
+.gunter {
+    width: 90%;
+    height: 350px;
+    background-image: url('images/icy.jpg');
+    margin: auto;
+    margin-top: 80px;
+}
