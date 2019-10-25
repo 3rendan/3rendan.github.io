@@ -34,6 +34,11 @@ h1 {
     font-size: .75em;
     border-radius: 8px;
 }
+.working-directions {
+    font-family: 'Turret Road', cursive;
+    padding: 10px;
+    font-size: .75em;
+}
 
 .magic {
     display: flex;
@@ -47,27 +52,19 @@ h1 {
     margin: auto;
     border: 2px solid saddlebrown;
 }
-.popup-magic {
-    visibility: visible;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.work {
+    background-color: ivory;
+    /* background-image: url("images/magic-man-house.jpg"); */
+    font-family: 'Press Start 2P', cursive;
+    padding-top: 30px;
+    font-size: .75em;
+    border-radius: 8px;
 }
-.popup-content {
-    visibility: visible;
-    width: 400px;
-    height: 200px;
-}
-.popup-magic.active {
-    visibility: visible;
-}
-.popup-content.active {
-    visibility: visible;
-}
-.gunter {
-    width: 90%;
-    height: 350px;
-    background-image: url('images/icy.jpg');
-    margin: auto;
-    margin-top: 80px;
+.ui-dialog-title {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1em;
+    background-color: pink;
+    color: purple;
+    padding: 5px;
+    border-radius: 8px;
 }
