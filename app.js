@@ -192,10 +192,9 @@ $(()=>{
         kingMan(howTo);
     });
     
+    $(`.ui-button-icon-only`).on('click', function(){
+        window.location.reload();
+    })
 });
 
 
-
-    // $(`.ui-dialog-titlebar-close`).on('click', function(){
-    //     // needs to simply refresh the page
-    // })
