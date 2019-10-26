@@ -132,16 +132,17 @@ $(()=>{
                 // `Aren't you two great workers! You now have ¥${funds} with ${time} hours left. Would you like to go to the canteen and buy a brush. They're ¥6 but you can make ¥7 an hour. I'm probably gonna need to find something else to eat other than that tangle of wires and plastic.`
                 // `That was ok, but you only have ¥${funds} and ${time} hours left. Not enough to increase your earning capacity. The yard needs more help. Why don't you spend another hour cleaning.`,
             ];
-            if (funds > 6){
+            if (funds >= 6){
+                console.log(i);
                 $("#dialog").dialog(dishes).dialog("open");
-                $("#dialog").append($choreV2[6]);
+                $("#dialog").append(keepGoing[i]);
                 i++;
             }
-            if (funds === 6){
-                $("#dialog").dialog(buyBrush).dialog("open");
-                $("#dialog").append($choreV2[i]);
-                i++;
-            }
+            // if (funds === 6){
+            //     $("#dialog").dialog(buyBrush).dialog("open");
+            //     $("#dialog").append($choreV2[i]);
+            //     i++;
+            // }
             if (funds > 2){
                 setUp(keepGoing[i]);
                 if (funds === 3 && i === 2){
@@ -151,13 +152,11 @@ $(()=>{
                 } else {
                     $("#dialog").dialog(dishes).dialog("open");
                     $("#dialog").append($chore[i]);
-                    console.log(funds);
                     i++;
                 }
 
             }
             if (funds < 2.1) {
-                console.log(funds);
                 setUp(keepGoing[i]);
                 $("#dialog").dialog(cleaningYard).dialog("open");
                 $("#dialog").append($chore[i]);
@@ -191,8 +190,13 @@ $(()=>{
         let howTo = `Magic Man's house is filthy. He has taken Bemo captive because he is wicked. Fionna and Cake offer to clean his house for credit to buy back Bemo. He grudgingly agrees. He agrees to a price of ¥13. You can earn ¥1 for picking up the floor. When you get ¥3 together you can use that to buy a sponge. With the sponge you can do dishes and earn ¥3. You can buy a brush to clean the bathroom for ¥5. Cleaning the bathroom earns you ¥5. Each cleaningYard takes an hour. You must purchase Bemo before the end of the day. That gives you 8 hours to earn Bemo's freedom.`;
         kingMan(howTo);
     });
+    $('#bemo').on('click', function(){
+        $('body').empty();
+        $('html').css(`background-image`, `url("images/bemo.gif"`);
+
+    });
     
-    $(`.ui-button-icon-only`).on('click', function(){
+    $(`.ui-button-icon-only`).on('click', function(){ // can't get this to refresh the page
         window.location.reload();
     })
 });
