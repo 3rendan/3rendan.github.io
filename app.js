@@ -192,7 +192,7 @@ $(()=>{
     });
     $('#bemo').on('click', function(){
         $('body').empty();
-        $('html').css(`background-image`, `url("images/bemo.gif"`);
+        $('html').css(`background-image`, `url("images/bemo.gif"`).css('width', "500px").css(`display`, `block`).css(`margin`, `auto`);
 
     });
     
